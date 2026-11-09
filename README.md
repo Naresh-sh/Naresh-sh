@@ -1,5 +1,3 @@
-### 💫 About Me
-
 Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new.
 
 ### 🛠️ Skills
