@@ -18,34 +18,32 @@ EOF
 ```
 ---
 
-### 🌐 Socials & Connect
+### 🌐 Socials
 Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new.
 
 <p align="left">
-  <a href="https://bsky.app/profile/Navita" target="_blank">
-    <img src="./assets/badges/bluesky.svg" height="38" alt="Bluesky" />
-  </a>
-  <a href="https://behance.net/Maker_studioz" target="_blank">
-    <img src="./assets/badges/behance.svg" height="38" alt="Behance" />
-  </a>
-  <a href="https://www.instagram.com/_nodespo/" target="_blank">
-    <img src="./assets/badges/instagram.svg" height="38" alt="Instagram" />
-  </a>
-  <a href="https://linkedin.com/in/https://www.linkedin.com/feed/foryou/" target="_blank">
-    <img src="./assets/badges/linkedin.svg" height="38" alt="LinkedIn" />
-  </a>
-  <a href="https://medium.com/@Makerbazar.com" target="_blank">
-    <img src="./assets/badges/medium.svg" height="38" alt="Medium" />
-  </a>
-  <a href="https://mastodon.social/@Naresh" target="_blank">
-    <img src="./assets/badges/mastodon.svg" height="38" alt="Mastodon" />
-  </a>
-  <a href="mailto:nareshraj112211@gmail.com" target="_blank">
-    <img src="./assets/badges/email.svg" height="38" alt="Email" />
-  </a>
+  <a href="https://bsky.app/profile/Navita" target="_blank"><img src="https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white" height="28" alt="Bluesky" /></a>
+  <a href="https://behance.net/Maker_studioz" target="_blank"><img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white" height="28" alt="Behance" /></a>
+  <a href="https://www.instagram.com/_nodespo/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" height="28" alt="Instagram" /></a>
+  <a href="https://linkedin.com/in/https://www.linkedin.com/feed/foryou/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" height="28" alt="LinkedIn" /></a>
+  <a href="https://medium.com/@Makerbazar.com" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" height="28" alt="Medium" /></a>
+  <a href="https://mastodon.social/@Naresh" target="_blank"><img src="https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white" height="28" alt="Mastodon" /></a>
+  <a href="mailto:nareshraj112211@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="28" alt="Email" /></a>
 </p>
 
-### 🛠️ Skills
+### 🛠️ Skills & Tools
+
+<p align="left">
+  <img src="./assets/badges/skills/kali-linux.svg" height="38" alt="Kali Linux" />
+  <img src="./assets/badges/skills/esp32.svg" height="38" alt="ESP32" />
+  <img src="./assets/badges/skills/arduino.svg" height="38" alt="Arduino IDE" />
+  <img src="./assets/badges/skills/android.svg" height="38" alt="Android Native" />
+  <img src="./assets/badges/skills/3d-printing.svg" height="38" alt="3D Design & STL" />
+  <img src="./assets/badges/skills/hardware.svg" height="38" alt="Hardware Lab" />
+  <img src="./assets/badges/skills/gps-oled.svg" height="38" alt="GPS & OLED" />
+  <img src="./assets/badges/skills/git-github.svg" height="38" alt="Git & GitHub" />
+  <img src="./assets/badges/skills/bash.svg" height="38" alt="Bash Scripting" />
+</p>
 
 - **Embedded / IoT:** ESP32, ESP32-CAM, Arduino IDE, C/C++, I2S audio, GPS (NEO-6M), OLED (SSD1306)
 - **Mobile:** Native Android development
@@ -53,6 +51,18 @@ Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always
 - **Tools & Platforms:** Linux (Kali), Git & GitHub, REST APIs, AI/LLM APIs, WhatsApp automation
 
 ### 💻 Tech Stack
+
+<p align="left">
+  <img src="./assets/badges/skills/cplusplus.svg" height="38" alt="C / C++" />
+  <img src="./assets/badges/skills/python.svg" height="38" alt="Python" />
+  <img src="./assets/badges/skills/kotlin.svg" height="38" alt="Kotlin" />
+  <img src="./assets/badges/skills/typescript.svg" height="38" alt="TypeScript" />
+  <img src="./assets/badges/skills/javascript.svg" height="38" alt="JavaScript" />
+  <img src="./assets/badges/skills/fastapi.svg" height="38" alt="FastAPI" />
+  <img src="./assets/badges/skills/mysql.svg" height="38" alt="MySQL" />
+  <img src="./assets/badges/skills/aws.svg" height="38" alt="AWS Cloud" />
+  <img src="./assets/badges/skills/unity.svg" height="38" alt="Unity 3D" />
+</p>
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,js,html,kotlin,py,bash,powershell,ts,aws,cloudflare,firebase,gcp,mysql,git,github,unity,php&theme=dark" alt="Tech Stack Icons" />

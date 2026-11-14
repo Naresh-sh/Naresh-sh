@@ -1,35 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 38" width="140" height="38">
   <defs>
-    <!-- Background Gradient with Rich Lustre -->
+    <!-- Rich Metallic Luster Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8385ff" />
-      <stop offset="50%" stop-color="#6364ff" />
-      <stop offset="100%" stop-color="#463bbd" />
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
     </linearGradient>
 
-    <!-- Glass Top Reflection -->
+    <!-- 3D Specular Glass Highlight -->
     <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.38" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04" />
     </linearGradient>
 
-    <!-- Glowing Metallic Border -->
+    <!-- Metallic Specular Border -->
     <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85" />
       <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.6" />
     </linearGradient>
 
-    <!-- Lustre Sheen Beam -->
+    <!-- Dynamic Lustre Beam (Motion Sweep) -->
     <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.15" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.75" />
-      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.2" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Inner Mask for Clip -->
     <mask id="badgeMask">
       <rect x="1" y="1" width="138" height="36" rx="7" fill="#ffffff" />
     </mask>
@@ -37,21 +36,21 @@
     <style>
       @keyframes gleam {
         0% { transform: translateX(-140px) skewX(-25deg); opacity: 0; }
-        8% { opacity: 0.85; }
-        28% { transform: translateX(260px) skewX(-25deg); opacity: 0.85; }
+        8% { opacity: 0.9; }
+        28% { transform: translateX(260px) skewX(-25deg); opacity: 0.9; }
         35%, 100% { transform: translateX(260px) skewX(-25deg); opacity: 0; }
       }
       @keyframes pulseGlow {
         0%, 100% { filter: drop-shadow(0 0 1px rgba(255,255,255,0.4)); }
-        50% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.95)) drop-shadow(0 0 10px #8385ff); }
+        50% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.95)) drop-shadow(0 0 8px #f59e0b); }
       }
       .sheen {
         animation: gleam 4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
-        animation-delay: 2.0s;
+        animation-delay: 3.0s;
       }
       .logo-icon {
         animation: pulseGlow 2.5s ease-in-out infinite;
-        animation-delay: 2.0s;
+        animation-delay: 3.0s;
       }
       .badge-text {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -63,7 +62,7 @@
     </style>
   </defs>
 
-  <!-- Drop shadow base -->
+  <!-- Shadow Base -->
   <rect x="1" y="2" width="138" height="35" rx="7" fill="#000000" opacity="0.35" />
 
   <!-- Main Badge Pill -->
@@ -79,10 +78,8 @@
 
   <!-- Icon + Text Content -->
   <g transform="translate(12, 9)" class="logo-icon">
-    <g transform="scale(0.85) translate(0, 1)" fill="#ffffff">
-  <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.244 15.12 0 12.001 0c-3.118 0-5.508.244-5.963.309-2.687.394-4.954 2.426-5.304 5.004-.374 2.76-.39 6.27-.39 8.288 0 3.238.257 6.452.793 9.488 1.487 8.44 11.233 8.358 11.233 8.358 3.659.227 6.643-1.077 6.643-1.077l-.096-2.094s-2.578.805-5.467.728c-2.888-.077-5.945-.497-6.326-4.004l-.03-.324c3.424.845 7.027.975 10.596.386 2.809-.462 5.275-2.046 5.568-3.805.518-3.11.455-7.66.455-7.66 0-2.018-.016-5.528-.39-8.288zm-4.707 9.878h-2.544V8.756c0-1.57-.655-2.366-1.966-2.366-1.454 0-2.181.939-2.181 2.818v4.07h-2.544v-4.07c0-1.879-.727-2.818-2.181-2.818-1.311 0-1.966.796-1.966 2.366v6.435H2.642V8.473c0-1.57.4-2.82 1.2-3.75 1.054-1.223 2.44-1.854 4.159-1.854 1.986 0 3.498.761 4.536 2.282 1.037-1.521 2.549-2.282 4.535-2.282 1.719 0 3.105.631 4.159 1.854.8.93 1.2 2.18 1.2 3.75v6.718h-.129z" transform="scale(0.85)"/>
-</g>
+    <g transform="scale(0.85)" fill="#ffffff"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></g>
   </g>
 
-  <text x="40" y="23" class="badge-text">Mastodon</text>
+  <text x="40" y="23" class="badge-text">AWS Cloud</text>
 </svg>
