@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 38" width="140" height="38">
+  <defs>
+    <!-- Background Gradient with Rich Lustre -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8385ff" />
+      <stop offset="50%" stop-color="#6364ff" />
+      <stop offset="100%" stop-color="#463bbd" />
+    </linearGradient>
+
+    <!-- Glass Top Reflection -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+
+    <!-- Glowing Metallic Border -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Lustre Sheen Beam -->
+    <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.75" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Inner Mask for Clip -->
+    <mask id="badgeMask">
+      <rect x="1" y="1" width="138" height="36" rx="7" fill="#ffffff" />
+    </mask>
+
+    <style>
+      @keyframes gleam {
+        0% { transform: translateX(-140px) skewX(-25deg); opacity: 0; }
+        8% { opacity: 0.85; }
+        28% { transform: translateX(260px) skewX(-25deg); opacity: 0.85; }
+        35%, 100% { transform: translateX(260px) skewX(-25deg); opacity: 0; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { filter: drop-shadow(0 0 1px rgba(255,255,255,0.4)); }
+        50% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.95)) drop-shadow(0 0 10px #8385ff); }
+      }
+      .sheen {
+        animation: gleam 4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+        animation-delay: 2.0s;
+      }
+      .logo-icon {
+        animation: pulseGlow 2.5s ease-in-out infinite;
+        animation-delay: 2.0s;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+
+  <!-- Drop shadow base -->
+  <rect x="1" y="2" width="138" height="35" rx="7" fill="#000000" opacity="0.35" />
+
+  <!-- Main Badge Pill -->
+  <rect x="1" y="1" width="138" height="35" rx="7" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
+
+  <!-- Glass Top Reflection for 3D Luster -->
+  <rect x="1" y="1" width="138" height="17" rx="7" fill="url(#glassGrad)" />
+
+  <!-- Animated Moving Lustre Light Sweep -->
+  <g mask="url(#badgeMask)">
+    <rect x="-120" y="-10" width="55" height="60" fill="url(#sheenGrad)" class="sheen" />
+  </g>
+
+  <!-- Icon + Text Content -->
+  <g transform="translate(12, 9)" class="logo-icon">
+    <g transform="scale(0.85) translate(0, 1)" fill="#ffffff">
+  <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.244 15.12 0 12.001 0c-3.118 0-5.508.244-5.963.309-2.687.394-4.954 2.426-5.304 5.004-.374 2.76-.39 6.27-.39 8.288 0 3.238.257 6.452.793 9.488 1.487 8.44 11.233 8.358 11.233 8.358 3.659.227 6.643-1.077 6.643-1.077l-.096-2.094s-2.578.805-5.467.728c-2.888-.077-5.945-.497-6.326-4.004l-.03-.324c3.424.845 7.027.975 10.596.386 2.809-.462 5.275-2.046 5.568-3.805.518-3.11.455-7.66.455-7.66 0-2.018-.016-5.528-.39-8.288zm-4.707 9.878h-2.544V8.756c0-1.57-.655-2.366-1.966-2.366-1.454 0-2.181.939-2.181 2.818v4.07h-2.544v-4.07c0-1.879-.727-2.818-2.181-2.818-1.311 0-1.966.796-1.966 2.366v6.435H2.642V8.473c0-1.57.4-2.82 1.2-3.75 1.054-1.223 2.44-1.854 4.159-1.854 1.986 0 3.498.761 4.536 2.282 1.037-1.521 2.549-2.282 4.535-2.282 1.719 0 3.105.631 4.159 1.854.8.93 1.2 2.18 1.2 3.75v6.718h-.129z" transform="scale(0.85)"/>
+</g>
+  </g>
+
+  <text x="40" y="23" class="badge-text">Mastodon</text>
+</svg>

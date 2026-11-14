@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 38" width="130" height="38">
+  <defs>
+    <!-- Background Gradient with Rich Lustre -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2cb5ff" />
+      <stop offset="50%" stop-color="#0285FF" />
+      <stop offset="100%" stop-color="#0058b8" />
+    </linearGradient>
+
+    <!-- Glass Top Reflection -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+
+    <!-- Glowing Metallic Border -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Lustre Sheen Beam -->
+    <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.75" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Inner Mask for Clip -->
+    <mask id="badgeMask">
+      <rect x="1" y="1" width="128" height="36" rx="7" fill="#ffffff" />
+    </mask>
+
+    <style>
+      @keyframes gleam {
+        0% { transform: translateX(-140px) skewX(-25deg); opacity: 0; }
+        8% { opacity: 0.85; }
+        28% { transform: translateX(250px) skewX(-25deg); opacity: 0.85; }
+        35%, 100% { transform: translateX(250px) skewX(-25deg); opacity: 0; }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { filter: drop-shadow(0 0 1px rgba(255,255,255,0.4)); }
+        50% { filter: drop-shadow(0 0 5px rgba(255,255,255,0.95)) drop-shadow(0 0 10px #2cb5ff); }
+      }
+      .sheen {
+        animation: gleam 4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+        animation-delay: 0.0s;
+      }
+      .logo-icon {
+        animation: pulseGlow 2.5s ease-in-out infinite;
+        animation-delay: 0.0s;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+
+  <!-- Drop shadow base -->
+  <rect x="1" y="2" width="128" height="35" rx="7" fill="#000000" opacity="0.35" />
+
+  <!-- Main Badge Pill -->
+  <rect x="1" y="1" width="128" height="35" rx="7" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
+
+  <!-- Glass Top Reflection for 3D Luster -->
+  <rect x="1" y="1" width="128" height="17" rx="7" fill="url(#glassGrad)" />
+
+  <!-- Animated Moving Lustre Light Sweep -->
+  <g mask="url(#badgeMask)">
+    <rect x="-120" y="-10" width="55" height="60" fill="url(#sheenGrad)" class="sheen" />
+  </g>
+
+  <!-- Icon + Text Content -->
+  <g transform="translate(12, 9)" class="logo-icon">
+    <path d="M10 9c-1.49-3.295-4.553-5.25-7.39-5.25-3.419 0-5.11 2.51-5.11 5.37 0 2.547 1.47 5.966 3.597 8.228 1.788 1.902 4.09 2.994 6.403 3.319-2.028-.704-3.725-2.178-4.37-4.073-.275-.805-.153-1.6.296-2.15.457-.56 1.199-.781 2.047-.626 2.966.545 5.631 2.773 7.027 5.348 1.396-2.575 4.061-4.803 7.027-5.348.848-.155 1.59.066 2.047.626.449.55.571 1.345.296 2.15-.645 1.895-2.342 3.369-4.37 4.073 2.313-.325 4.615-1.417 6.403-3.319 2.127-2.262 3.597-5.681 3.597-8.228 0-2.86-1.691-5.37-5.11-5.37-2.837 0-5.9 1.955-7.39 5.25z" transform="scale(0.85) translate(0, 1)" fill="#ffffff"/>
+  </g>
+
+  <text x="40" y="23" class="badge-text">Bluesky</text>
+</svg>
