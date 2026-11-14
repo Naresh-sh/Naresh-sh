@@ -4,7 +4,18 @@
 
 ```bash
 
-
+┌──(naresh💀kali)-[~/profile]
+└─$ cat << "EOF"
+ _       __     __                             
+| |     / /__  / /________  ____ ___  ___      
+| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \     
+| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/     
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/      
+EOF
+[+] SYSTEM: Kali Linux x86_64 // Custom Hardware & IoT Lab
+[+] PROFILE: Naresh (@Naresh-sh) // Elite Developer Mode Active
+[+] ARCADE: 4 In-Profile Games Initialized [Zero-Redirect Engine]
+```
 ---
 
 ### 🌐 Socials
