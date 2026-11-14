@@ -17,18 +17,14 @@
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
       }
-      @keyframes scanline {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(430px); }
-      }
       .cursor {
         animation: blink 1s step-start infinite;
       }
-      .prompt { font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; fill: #00ff88; }
+      .prompt { font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; font-size: 13px; fill: #00ff88; }
       .path { fill: #38bdf8; }
       .cmd { fill: #f8fafc; font-weight: bold; }
       .ascii { font-family: 'Courier New', Courier, monospace; font-size: 11px; fill: #00ff88; font-weight: bold; filter: url(#glow); }
-      .box { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12.5px; fill: #94a3b8; }
+      .box { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12px; fill: #94a3b8; }
       .key { fill: #38bdf8; font-weight: 600; }
       .val { fill: #f1f5f9; }
       .highlight { fill: #00ff88; font-weight: bold; }
@@ -49,65 +45,68 @@
   <circle cx="62" cy="19" r="6" fill="#10b981" />
 
   <!-- Window Title -->
-  <text x="425" y="23" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#64748b" font-weight="bold">naresh@kali: ~/welcome-metrics (bash)</text>
+  <text x="425" y="23" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#64748b" font-weight="bold">naresh@kali: ~/maker-studio/navita (bash)</text>
 
   <!-- Status indicator on right -->
   <circle cx="818" cy="19" r="4" fill="#00ff88" filter="url(#glow)"/>
-  <text x="806" y="23" text-anchor="end" font-family="'Fira Code', monospace" font-size="11" fill="#00ff88">LIVE</text>
+  <text x="806" y="23" text-anchor="end" font-family="'Fira Code', monospace" font-size="11" fill="#00ff88">ONLINE</text>
 
   <!-- Content -->
   <!-- Prompt line -->
-  <g transform="translate(25, 62)">
+  <g transform="translate(25, 58)">
     <text class="prompt">
-      <tspan fill="#00ff88">┌──(</tspan><tspan fill="#ef4444" font-weight="bold">naresh💀kali</tspan><tspan fill="#00ff88">)-[</tspan><tspan class="path">~/portfolio/metrics</tspan><tspan fill="#00ff88">]</tspan>
+      <tspan fill="#00ff88">┌──(</tspan><tspan fill="#ef4444" font-weight="bold">naresh💀kali</tspan><tspan fill="#00ff88">)-[</tspan><tspan class="path">~/maker-studio/navita-core</tspan><tspan fill="#00ff88">]</tspan>
     </text>
-    <text y="20" class="prompt">
-      <tspan fill="#00ff88">└─$ </tspan><tspan class="cmd">./display_welcome --pro --arcade-init</tspan>
+    <text y="18" class="prompt">
+      <tspan fill="#00ff88">└─$ </tspan><tspan class="cmd">./initialize_hub --studio="Maker Studio" --app="Navita"</tspan>
     </text>
   </g>
 
   <!-- ASCII Art: WELCOME -->
-  <g transform="translate(25, 115)">
+  <g transform="translate(25, 108)">
     <text class="ascii" xml:space="preserve">
 <tspan x="0" dy="0">██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗</tspan>
-<tspan x="0" dy="13">██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝</tspan>
-<tspan x="0" dy="13">██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  </tspan>
-<tspan x="0" dy="13">██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  </tspan>
-<tspan x="0" dy="13">╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗</tspan>
-<tspan x="0" dy="13"> ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝</tspan>
+<tspan x="0" dy="12">██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝</tspan>
+<tspan x="0" dy="12">██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  </tspan>
+<tspan x="0" dy="12">██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  </tspan>
+<tspan x="0" dy="12">╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗</tspan>
+<tspan x="0" dy="12"> ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝</tspan>
     </text>
   </g>
 
   <!-- System Telemetry Metrics Table -->
-  <g transform="translate(25, 218)">
-    <!-- Box frame -->
-    <rect x="0" y="0" width="800" height="182" rx="6" fill="#04080c" stroke="#1e293b" stroke-width="1" />
-    <path d="M0 0 L180 0 L190 20 L0 20 Z" fill="#0f172a" />
-    <text x="12" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#38bdf8" font-weight="bold">CORE TELEMETRY</text>
+  <g transform="translate(25, 204)">
+    <rect x="0" y="0" width="800" height="196" rx="6" fill="#04080c" stroke="#1e293b" stroke-width="1" />
+    <path d="M0 0 L190 0 L200 20 L0 20 Z" fill="#0f172a" />
+    <text x="12" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#38bdf8" font-weight="bold">STUDIO &amp; SYSTEM TELEMETRY</text>
 
     <!-- Metrics rows -->
-    <text x="20" y="42" class="box">
+    <text x="20" y="40" class="box">
       <tspan class="key">👤 DEVELOPER   :</tspan> <tspan class="val">Naresh Mali</tspan> <tspan fill="#64748b">(GitHub: </tspan><tspan class="highlight">@Naresh-sh</tspan><tspan fill="#64748b">)</tspan>
     </text>
 
-    <text x="20" y="66" class="box">
-      <tspan class="key">💻 ENVIRONMENT :</tspan> <tspan class="val">Kali Linux x86_64 // Custom Prototyping &amp; Hardware Lab</tspan>
+    <text x="20" y="64" class="box">
+      <tspan class="key">🏢 STUDIO      :</tspan> <tspan class="highlight">Maker Studio</tspan> <tspan fill="#f59e0b">[IoT Hardware • Firmware • Enclosures &amp; 3D Prototyping]</tspan>
     </text>
 
-    <text x="20" y="90" class="box">
-      <tspan class="key">⚡ EXPERTISE   :</tspan> <tspan class="val">ESP32 Firmware • Embedded C/C++ • Native Android • 3D Design</tspan>
+    <text x="20" y="88" class="box">
+      <tspan class="key">🛰️ TRACKING APP:</tspan> <tspan class="highlight">Navita</tspan> <tspan fill="#38bdf8">[Real-Time GPS Tracking Ecosystem &amp; Telemetry]</tspan>
     </text>
 
-    <text x="20" y="114" class="box">
-      <tspan class="key">🔧 HARDWARE    :</tspan> <tspan class="val">ESP32-CAM, NEO-6M GPS, SSD1306 OLED, I2S Audio, Custom Enclosures</tspan>
+    <text x="20" y="112" class="box">
+      <tspan class="key">💻 ENVIRONMENT :</tspan> <tspan class="val">Kali Linux x86_64 // KiCad, Tinkercad, Blender, Cura, Android Studio</tspan>
     </text>
 
-    <text x="20" y="138" class="box">
+    <text x="20" y="136" class="box">
+      <tspan class="key">🔧 HARDWARE LAB:</tspan> <tspan class="val">ESP32 / CAM, Arduino, NEO-6M GPS, SSD1306 OLED, 3D Print STL</tspan>
+    </text>
+
+    <text x="20" y="160" class="box">
       <tspan class="key">🕹️ MINI ARCADE :</tspan> <tspan class="highlight">[ONLINE]</tspan> <tspan class="val">Tic-Tac-Toe AI • Retro Snake • Chrome Dino • Space Invaders</tspan>
     </text>
 
-    <text x="20" y="162" class="box">
-      <tspan class="key">📡 SYSTEM STATE:</tspan> <tspan class="badge-online">● 100% OPERATIONAL</tspan> <tspan fill="#475569">| Ready for Next-Gen Engineering</tspan> <tspan class="cursor" fill="#00ff88">█</tspan>
+    <text x="20" y="184" class="box">
+      <tspan class="key">📡 SYSTEM STATE:</tspan> <tspan class="badge-online">● 100% OPERATIONAL</tspan> <tspan fill="#475569">| Maker Studio Hub Online</tspan> <tspan class="cursor" fill="#00ff88">█</tspan>
     </text>
   </g>
 </svg>

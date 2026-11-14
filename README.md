@@ -3,8 +3,7 @@
 </div>
 
 ```bash
-
-┌──(naresh💀kali)-[~/profile]
+┌──(naresh💀kali)-[~/maker-studio]
 └─$ cat << "EOF"
  _       __     __                             
 | |     / /__  / /________  ____ ___  ___      
@@ -12,99 +11,100 @@
 | |/ |/ /  __/ / /__/ /_/ / / / / / /  __/     
 |__/|__/\___/_/\___/\____/_/ /_/ /_/\___/      
 EOF
-[+] SYSTEM: Kali Linux x86_64 // Custom Hardware & IoT Lab
-[+] PROFILE: Naresh (@Naresh-sh) // Elite Developer Mode Active
-[+] ARCADE: 4 In-Profile Games Initialized [Zero-Redirect Engine]
+[+] CREATOR : Naresh Mali (@Naresh-sh)
+[+] STUDIO  : Maker Studio (Hardware Prototyping & Embedded Systems Lab)
+[+] APP     : Navita (Real-Time GPS Tracking & Telemetry Ecosystem)
+[+] LAB     : KiCad • Tinkercad • Blender • Ultimaker Cura • Android Studio
 ```
 ---
 
-### 🌐 Socials
-Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new.
+### 🚀 Featured Highlights: Maker Studio & Navita App
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏢 Maker Studio</h3>
+      <p>My independent hardware prototyping and engineering studio focusing on custom IoT circuits, ESP32 firmware, custom PCB design, 3D printing (STL), and enclosure fabrication.</p>
+      <a href="https://behance.net/Maker_studioz" target="_blank"><img src="./assets/badges/skills/maker-studio.svg" height="34" alt="Maker Studio" /></a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛰️ Navita (GPS Tracking App)</h3>
+      <p>An advanced tracking-related Android application connecting hardware GPS telemetry (NEO-6M), live location mapping, and real-time IoT monitoring.</p>
+      <a href="https://github.com/Naresh-sh/Navita_gps" target="_blank"><img src="./assets/badges/skills/navita.svg" height="34" alt="Navita GPS Tracking App" /></a>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🌐 Socials & Connect
+Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new. Drop a star ⭐ if you like my work!
 
 <p align="left">
+  <a href="https://github.com/Naresh-sh" target="_blank"><img src="https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white" height="28" alt="GitHub" /></a>
+  <a href="mailto:nareshraj112211@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="28" alt="Email" /></a>
   <a href="https://bsky.app/profile/Navita" target="_blank"><img src="https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white" height="28" alt="Bluesky" /></a>
   <a href="https://behance.net/Maker_studioz" target="_blank"><img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white" height="28" alt="Behance" /></a>
   <a href="https://www.instagram.com/_nodespo/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" height="28" alt="Instagram" /></a>
   <a href="https://linkedin.com/in/https://www.linkedin.com/feed/foryou/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" height="28" alt="LinkedIn" /></a>
   <a href="https://medium.com/@Makerbazar.com" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" height="28" alt="Medium" /></a>
   <a href="https://mastodon.social/@Naresh" target="_blank"><img src="https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white" height="28" alt="Mastodon" /></a>
-  <a href="mailto:nareshraj112211@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="28" alt="Email" /></a>
 </p>
 
-### 🛠️ Skills & Tools
+---
+
+### 🛠️ Hardware Lab & Prototyping Tools
 
 <p align="left">
   <img src="./assets/badges/skills/kali-linux.svg" height="38" alt="Kali Linux" />
   <img src="./assets/badges/skills/esp32.svg" height="38" alt="ESP32" />
   <img src="./assets/badges/skills/arduino.svg" height="38" alt="Arduino IDE" />
-  <img src="./assets/badges/skills/android.svg" height="38" alt="Android Native" />
-  <img src="./assets/badges/skills/3d-printing.svg" height="38" alt="3D Design & STL" />
+  <img src="./assets/badges/skills/android-studio.svg" height="38" alt="Android Studio" />
+  <img src="./assets/badges/skills/arduinodroid.svg" height="38" alt="ArduinoDroid" />
+  <img src="./assets/badges/skills/kicad.svg" height="38" alt="KiCad PCB Design" />
+  <img src="./assets/badges/skills/tinkercad.svg" height="38" alt="Tinkercad" />
+  <img src="./assets/badges/skills/blender.svg" height="38" alt="Blender" />
+  <img src="./assets/badges/skills/cura.svg" height="38" alt="Ultimaker Cura" />
+  <img src="./assets/badges/skills/3d-printing.svg" height="38" alt="3D Design &amp; STL" />
   <img src="./assets/badges/skills/hardware.svg" height="38" alt="Hardware Lab" />
-  <img src="./assets/badges/skills/gps-oled.svg" height="38" alt="GPS & OLED" />
-  <img src="./assets/badges/skills/git-github.svg" height="38" alt="Git & GitHub" />
+  <img src="./assets/badges/skills/gps-oled.svg" height="38" alt="GPS &amp; OLED" />
+  <img src="./assets/badges/skills/git-github.svg" height="38" alt="Git &amp; GitHub" />
   <img src="./assets/badges/skills/bash.svg" height="38" alt="Bash Scripting" />
 </p>
 
-- **Embedded / IoT:** ESP32, ESP32-CAM, Arduino IDE, C/C++, I2S audio, GPS (NEO-6M), OLED (SSD1306)
-- **Mobile:** Native Android development
-- **Hardware & Design:** 3D modeling and printing (STL), enclosure design, electronics prototyping, SVG / logo design
-- **Tools & Platforms:** Linux (Kali), Git & GitHub, REST APIs, AI/LLM APIs, WhatsApp automation
+---
 
-### 💻 Tech Stack
+### 💻 Tech Stack & Programming Languages
 
 <p align="left">
-  <img src="./assets/badges/skills/cplusplus.svg" height="38" alt="C / C++" />
-  <img src="./assets/badges/skills/python.svg" height="38" alt="Python" />
-  <img src="./assets/badges/skills/kotlin.svg" height="38" alt="Kotlin" />
-  <img src="./assets/badges/skills/typescript.svg" height="38" alt="TypeScript" />
-  <img src="./assets/badges/skills/javascript.svg" height="38" alt="JavaScript" />
-  <img src="./assets/badges/skills/fastapi.svg" height="38" alt="FastAPI" />
-  <img src="./assets/badges/skills/mysql.svg" height="38" alt="MySQL" />
-  <img src="./assets/badges/skills/aws.svg" height="38" alt="AWS Cloud" />
-  <img src="./assets/badges/skills/unity.svg" height="38" alt="Unity 3D" />
+  <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" height="30" alt="C" />
+  <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" height="30" alt="C#" />
+  <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="30" alt="C++" />
+  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="30" alt="Java" />
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" height="30" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" height="30" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" height="30" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="30" alt="Python" />
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" height="30" alt="HTML5" />
+  <img src="https://img.shields.io/badge/PHP-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" height="30" alt="PHP" />
+  <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white" height="30" alt="PowerShell" />
+  <img src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white" height="30" alt="Windows Terminal" />
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white" height="30" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" height="30" alt="MySQL" />
+  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" height="30" alt="AWS" />
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white" height="30" alt="Cloudflare" />
+  <img src="https://img.shields.io/badge/Firebase-%23039BE5.svg?style=for-the-badge&logo=firebase&logoColor=white" height="30" alt="Firebase" />
+  <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" height="30" alt="Google Cloud" />
+  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" height="30" alt="Oracle" />
+  <img src="https://img.shields.io/badge/Alpine.js-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0" height="30" alt="Alpine.js" />
+  <img src="https://img.shields.io/badge/Angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white" height="30" alt="Angular.js" />
+  <img src="https://img.shields.io/badge/Chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white" height="30" alt="Chart.js" />
+  <img src="https://img.shields.io/badge/Unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" height="30" alt="Unity" />
+  <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" height="30" alt="Canva" />
+  <img src="https://img.shields.io/badge/Codeberg-2185D0?style=for-the-badge&logo=Codeberg&logoColor=white" height="30" alt="Codeberg" />
 </p>
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,js,html,kotlin,py,bash,powershell,ts,aws,cloudflare,firebase,gcp,mysql,git,github,unity,php&theme=dark" alt="Tech Stack Icons" />
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" height="30" />
-  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="30" />
-  <img src="https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" height="30" />
-  <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" height="30" />
-  <img src="https://img.shields.io/badge/alpinejs-white.svg?style=for-the-badge&logo=alpinedotjs&logoColor=%238BC0D0" height="30" />
-  <img src="https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" height="30" />
-  <img src="https://img.shields.io/badge/Codeberg-2185D0?style=for-the-badge&logo=Codeberg&logoColor=white" height="30" />
-</p>
-### 📫 Connect With Me
-
-- GitHub: [@Naresh-sh](https://github.com/Naresh-sh)
-- Email: nareshraj112211@gmail.com
-
-⭐ If you like my work, drop a star on my repos!
-
+---
 
 <div align="center">
 
