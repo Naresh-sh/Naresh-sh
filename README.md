@@ -95,10 +95,6 @@ Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always
 
 ⭐ If you like my work, drop a star on my repos!
 
-### 🕹️ Hacker Arcade (Native On Profile • Zero Redirects)
-
-> [!NOTE]
-> All games below run **directly on this GitHub profile** with zero external redirects. 
 
 <div align="center">
 
