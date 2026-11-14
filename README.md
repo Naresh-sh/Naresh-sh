@@ -2,20 +2,6 @@
   <img src="./assets/welcome.svg" width="100%" alt="Naresh Kali Metrics Terminal Window" />
 </div>
 
-```bash
-┌──(naresh💀kali)-[~/maker-studio]
-└─$ cat << "EOF"
- _       __     __                             
-| |     / /__  / /________  ____ ___  ___      
-| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \     
-| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/     
-|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/      
-EOF
-[+] CREATOR : Naresh Mali (@Naresh-sh)
-[+] STUDIO  : Maker Studio (Hardware Prototyping & Embedded Systems Lab)
-[+] APP     : Navita (Real-Time GPS Tracking & Telemetry Ecosystem)
-[+] LAB     : KiCad • Tinkercad • Blender • Ultimaker Cura • Android Studio
-```
 ---
 
 ### 🚀 Featured Highlights: Maker Studio & Navita App
