@@ -48,21 +48,6 @@ Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always
 ⭐ If you like my work, drop a star on my repos!
 
 
-## 🎮 MY GAMING ARCADE
-
-<p align="center">
-  <img src="https://img.shields.io/badge/ARCADE-ONLINE-00ff88?style=for-the-badge&labelColor=050a08"/>
-</p>
-
-<p align="center">
-  <a href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/">
-    <img src="https://img.shields.io/badge/PLAY-TIC_TAC_TOE_&_SPACE_INVADERS-00ff88?style=for-the-badge&logo=gamepad&logoColor=black"/>
-  </a>
-</p>
-
-<p align="center">
-  💻 ENTER THE ARCADE • 👾 PLAY • 🏆 BEAT THE SCORE
-</p>
 
 
 ### 📊 GitHub Stats
