@@ -4,41 +4,6 @@
 
 ---
 
-### 🚀 Featured Highlights: Maker Studio & Navita App
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🏢 Maker Studio</h3>
-      <p>My independent hardware prototyping and engineering studio focusing on custom IoT circuits, ESP32 firmware, custom PCB design, 3D printing (STL), and enclosure fabrication.</p>
-      <a href="https://behance.net/Maker_studioz" target="_blank"><img src="./assets/badges/skills/maker-studio.svg" height="34" alt="Maker Studio" /></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🛰️ Navita (GPS Tracking App)</h3>
-      <p>An advanced tracking-related Android application connecting hardware GPS telemetry (NEO-6M), live location mapping, and real-time IoT monitoring.</p>
-      <a href="https://github.com/Naresh-sh/Navita_gps" target="_blank"><img src="./assets/badges/skills/navita.svg" height="34" alt="Navita GPS Tracking App" /></a>
-    </td>
-  </tr>
-</table>
-
----
-
-### 🌐 Socials & Connect
-Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new. Drop a star ⭐ if you like my work!
-
-<p align="left">
-  <a href="https://github.com/Naresh-sh" target="_blank"><img src="https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white" height="28" alt="GitHub" /></a>
-  <a href="mailto:nareshraj112211@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="28" alt="Email" /></a>
-  <a href="https://bsky.app/profile/Navita" target="_blank"><img src="https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white" height="28" alt="Bluesky" /></a>
-  <a href="https://behance.net/Maker_studioz" target="_blank"><img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white" height="28" alt="Behance" /></a>
-  <a href="https://www.instagram.com/_nodespo/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" height="28" alt="Instagram" /></a>
-  <a href="https://linkedin.com/in/https://www.linkedin.com/feed/foryou/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" height="28" alt="LinkedIn" /></a>
-  <a href="https://medium.com/@Makerbazar.com" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" height="28" alt="Medium" /></a>
-  <a href="https://mastodon.social/@Naresh" target="_blank"><img src="https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white" height="28" alt="Mastodon" /></a>
-</p>
-
----
-
 ### 🛠️ Hardware Lab & Prototyping Tools
 
 <p align="left">
@@ -88,6 +53,46 @@ Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always
   <img src="https://img.shields.io/badge/Unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" height="30" alt="Unity" />
   <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" height="30" alt="Canva" />
   <img src="https://img.shields.io/badge/Codeberg-2185D0?style=for-the-badge&logo=Codeberg&logoColor=white" height="30" alt="Codeberg" />
+</p>
+
+---
+
+### 🚀 Featured Highlights: Maker Studio, Navita & Apni Parking
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>🏢 Maker Studio</h3>
+      <p>My independent hardware prototyping &amp; engineering lab focusing on custom IoT circuits, ESP32 firmware, custom PCB design, 3D printing (STL), and enclosure fabrication.</p>
+      <a href="https://behance.net/Maker_studioz" target="_blank"><img src="./assets/badges/skills/maker-studio.svg" height="34" alt="Maker Studio" /></a>
+    </td>
+    <td width="33%" valign="top">
+      <h3>🛰️ Navita (GPS Tracking App)</h3>
+      <p>Advanced tracking-related Android application connecting hardware GPS telemetry (NEO-6M), live location mapping, and real-time IoT monitoring.</p>
+      <a href="https://github.com/Naresh-sh/Navita_gps" target="_blank"><img src="./assets/badges/skills/navita.svg" height="34" alt="Navita GPS Tracking App" /></a>
+    </td>
+    <td width="33%" valign="top">
+      <h3>🚗 Apni Parking (Smart Platform)</h3>
+      <p>Smart parking tracking &amp; slot management platform designed to track real-time parking occupancy, automate discovery, and optimize vehicle slot navigation.</p>
+      <a href="https://github.com/Naresh-sh/Apni-parking" target="_blank"><img src="./assets/badges/skills/apni-parking.svg" height="34" alt="Apni Parking Tracking Platform" /></a>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🌐 Socials & Connect
+Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new. Drop a star ⭐ if you like my work!
+
+<p align="left">
+  <a href="https://github.com/Naresh-sh" target="_blank"><img src="https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github&logoColor=white" height="28" alt="GitHub" /></a>
+  <a href="mailto:nareshraj112211@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="28" alt="Email" /></a>
+  <a href="https://bsky.app/profile/Navita" target="_blank"><img src="https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=white" height="28" alt="Bluesky" /></a>
+  <a href="https://behance.net/Maker_studioz" target="_blank"><img src="https://img.shields.io/badge/Behance-1769ff?style=for-the-badge&logo=behance&logoColor=white" height="28" alt="Behance" /></a>
+  <a href="https://www.instagram.com/_nodespo/" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" height="28" alt="Instagram" /></a>
+  <a href="https://linkedin.com/in/https://www.linkedin.com/feed/foryou/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" height="28" alt="LinkedIn" /></a>
+  <a href="https://medium.com/@Makerbazar.com" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" height="28" alt="Medium" /></a>
+  <a href="https://mastodon.social/@Naresh" target="_blank"><img src="https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white" height="28" alt="Mastodon" /></a>
 </p>
 
 ---
