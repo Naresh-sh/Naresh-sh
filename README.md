@@ -1,4 +1,12 @@
 ### 🌐 Socials
+Hi, I'm Naresh, I work on Kali Linux, enjoy hands-on prototyping, and I'm always learning something new.
+
+### 🛠️ Skills
+
+- **Embedded / IoT:** ESP32, ESP32-CAM, Arduino IDE, C/C++, I2S audio, GPS (NEO-6M), OLED (SSD1306)
+- **Mobile:** Native Android development
+- **Hardware & Design:** 3D modeling and printing (STL), enclosure design, electronics prototyping, SVG / logo design
+- **Tools & Platforms:** Linux (Kali), Git & GitHub, REST APIs, AI/LLM APIs, WhatsApp automation
 
 [![Bluesky](https://img.shields.io/badge/bluesky-0285FF?style=flat-square&logo=bluesky&logoColor=%23FFFFFF)](https://bsky.app/profile/Navita) [![Behance](https://img.shields.io/badge/Behance-1769ff?style=flat-square&logo=behance&logoColor=white)](https://behance.net/Maker_studioz) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=flat-square&logo=Instagram&logoColor=white)](https://www.instagram.com/_nodespo/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/feed/foryou/) [![Medium](https://img.shields.io/badge/Medium-12100E?style=flat-square&logo=medium&logoColor=white)](https://medium.com/@Makerbazar.com) [![Mastodon](https://img.shields.io/badge/-MASTODON-%232B90D9?style=flat-square&logo=mastodon&logoColor=white)](https://mastodon.social/@Naresh) [![email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:nareshraj112211@gmail.com)
 
