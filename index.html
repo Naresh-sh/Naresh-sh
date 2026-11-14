@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naresh | Hacker Arcade</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #050a08;
+  color: #00ff88;
+  font-family: Consolas, monospace;
+  min-height: 100vh;
+  padding: 25px 15px;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 35px 10px;
+  border: 1px solid #00ff8844;
+  background: #08140f;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ff8815;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 45px);
+  text-shadow: 0 0 15px #00ff88;
+}
+
+header p {
+  color: #91bda7;
+  margin-top: 12px;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #00ff88;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.section-title {
+  margin: 35px 0 18px;
+  font-size: 21px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.game-card {
+  background: #0a1711;
+  border: 1px solid #00ff8855;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+}
+
+.game-card h2 {
+  margin: 12px 0;
+}
+
+.game-card p {
+  color: #91bda7;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.game-icon {
+  font-size: 55px;
+}
+
+button {
+  cursor: pointer;
+  background: #00ff88;
+  border: none;
+  color: #001b0e;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-top: 18px;
+}
+
+button:hover {
+  background: white;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+.panel {
+  display: none;
+  background: #08140f;
+  border: 1px solid #00ff8855;
+  border-radius: 12px;
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+}
+
+.panel.active {
+  display: block;
+}
+
+.back {
+  background: transparent;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  margin: 0 0 20px;
+}
+
+.score {
+  margin: 15px;
+  color: white;
+  font-size: 17px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 85px);
+  justify-content: center;
+  gap: 8px;
+  margin: 25px auto;
+}
+
+.cell {
+  width: 85px;
+  height: 85px;
+  font-size: 32px;
+  margin: 0;
+  background: #10241a;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  background: #020604;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  touch-action: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls button {
+  min-width: 80px;
+}
+
+footer {
+  text-align: center;
+  color: #638b74;
+  margin-top: 45px;
+  padding: 20px;
+  border-top: 1px solid #00ff8833;
+  font-size: 12px;
+}
+
+@media(max-width: 400px) {
+  .board {
+    grid-template-columns: repeat(3, 75px);
+  }
+  .cell {
+    width: 75px;
+    height: 75px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1> &lt; NARESH ARCADE /&gt; </h1>
+  <p>Welcome to my Hacker Gaming Zone</p>
+  <div class="status">● SYSTEM ONLINE</div>
+</header>
+
+<h2 class="section-title">// SELECT YOUR GAME</h2>
+
+<div class="games" id="gameMenu">
+
+  <div class="game-card">
+    <div class="game-icon">❌</div>
+    <h2>TIC TAC TOE</h2>
+    <p>Challenge your friend in this classic strategy game.</p>
+    <button onclick="openGame('tic')">PLAY GAME</button>
+  </div>
+
+  <div class="game-card">
+    <div class="game-icon">👾</div>
+    <h2>SPACE INVADERS</h2>
+    <p>Control your spaceship and defend against alien invaders.</p>
+    <button onclick="openGame('space')">PLAY GAME</button>
+  </div>
+
+</div>
+
+<!-- TIC TAC TOE -->
+
+<div class="panel" id="ticPanel">
+  <button class="back" onclick="goBack()">← BACK TO ARCADE</button>
+  <h2>❌ TIC TAC TOE</h2>
+  <div class="score" id="ticStatus">Player X's Turn</div>
+
+  <div class="board" id="board"></div>
+
+  <button onclick="resetTic()">RESTART GAME</button>
+</div>
+
+<!-- SPACE INVADERS -->
+
+<div class="panel" id="spacePanel">
+  <button class="back" onclick="stopSpace()">← BACK TO ARCADE</button>
+  <h2>👾 SPACE INVADERS</h2>
+
+  <div class="score">
+    SCORE: <span id="spaceScore">0</span>
+    &nbsp; | &nbsp;
+    LIVES: <span id="lives">3</span>
+  </div>
+
+  <canvas id="gameCanvas" width="500" height="420"></canvas>
+
+  <div id="spaceStatus">Press START to play</div>
+
+  <button id="startSpace" onclick="startSpace()">START GAME</button>
+
+  <div class="controls">
+    <button id="leftBtn">◀ LEFT</button>
+    <button id="fireBtn">🔥 FIRE</button>
+    <button id="rightBtn">RIGHT ▶</button>
+  </div>
+
+  <p style="margin-top:15px;color:#91bda7;font-size:12px">
+    Keyboard: ← → to move, SPACE to fire.
+  </p>
+</div>
+
+<footer>
+  <p>DESIGNED BY NARESH | HACKER ARCADE</p>
+  <p style="margin-top:8px">CODE • CREATE • PLAY</p>
+</footer>
+
+</div>
+
+<script>
+
+// NAVIGATION
+
+function openGame(game) {
+  document.getElementById('gameMenu').style.display = 'none';
+  document.getElementById('ticPanel').classList.remove('active');
+  document.getElementById('spacePanel').classList.remove('active');
+
+  if(game === 'tic') {
+    document.getElementById('ticPanel').classList.add('active');
+  } else {
+    document.getElementById('spacePanel').classList.add('active');
+  }
+}
+
+function goBack() {
+  stopSpace();
+  document.getElementById('gameMenu').style.display = 'grid';
+  document.getElementById('ticPanel').classList.remove('active');
+  document.getElementById('spacePanel').classList.remove('active');
+}
+
+// TIC TAC TOE
+
+let cells = Array(9).fill('');
+let current = 'X';
+let finished = false;
+
+const board = document.getElementById('board');
+
+function drawBoard() {
+  board.innerHTML = '';
+
+  cells.forEach((value, index) => {
+    const button = document.createElement('button');
+    button.className = 'cell';
+    button.textContent = value;
+    button.onclick = () => playCell(index);
+    board.appendChild(button);
+  });
+}
+
+function playCell(index) {
+  if(cells[index] || finished) return;
+
+  cells[index] = current;
+
+  const wins = [
+    [0,1,2], [3,4,5], [6,7,8],
+    [0,3,6], [1,4,7], [2,5,8],
+    [0,4,8], [2,4,6]
+  ];
+
+  drawBoard();
+
+  if(wins.some(line => line.every(i => cells[i] === current))) {
+    document.getElementById('ticStatus').textContent =
+      '🏆 Player ' + current + ' Wins!';
+    finished = true;
+    return;
+  }
+
+  if(cells.every(Boolean)) {
+    document.getElementById('ticStatus').textContent = 'DRAW GAME!';
+    finished = true;
+    return;
+  }
+
+  current = current === 'X' ? 'O' : 'X';
+
+  document.getElementById('ticStatus').textContent =
+    "Player " + current + "'s Turn";
+}
+
+function resetTic() {
+  cells = Array(9).fill('');
+  current = 'X';
+  finished = false;
+  document.getElementById('ticStatus').textContent = "Player X's Turn";
+  drawBoard();
+}
+
+drawBoard();
+
+// SPACE INVADERS
+
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+let player = { x: 235, y: 375, w: 30, h: 20 };
+let bullets = [];
+let enemies = [];
+let score = 0;
+let lives = 3;
+let running = false;
+let frame = 0;
+let keys = {};
+let animationId = null;
+let fireHeld = false;
+
+function makeEnemies() {
+  enemies = [];
+
+  for(let row = 0; row < 3; row++) {
+    for(let col = 0; col < 8; col++) {
+      enemies.push({
+        x: 35 + col * 55,
+        y: 35 + row * 42,
+        w: 25,
+        h: 20
+      });
+    }
+  }
+}
+
+function drawPlayer() {
+  ctx.fillStyle = '#00ff88';
+  ctx.beginPath();
+  ctx.moveTo(player.x + 15, player.y);
+  ctx.lineTo(player.x, player.y + 20);
+  ctx.lineTo(player.x + 30, player.y + 20);
+  ctx.fill();
+}
+
+function drawEnemies() {
+  ctx.fillStyle = '#ff3864';
+
+  enemies.forEach(e => {
+    ctx.fillRect(e.x, e.y, e.w, e.h);
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(e.x + 5, e.y + 5, 4, 4);
+    ctx.fillRect(e.x + 16, e.y + 5, 4, 4);
+    ctx.fillStyle = '#ff3864';
+  });
+}
+
+function shoot() {
+  if(!running || bullets.length > 12) return;
+
+  bullets.push({
+    x: player.x + 13,
+    y: player.y,
+    w: 4,
+    h: 10
+  });
+}
+
+function updateSpace() {
+  if(keys.ArrowLeft) player.x -= 5;
+  if(keys.ArrowRight) player.x += 5;
+
+  player.x = Math.max(0, Math.min(470, player.x));
+
+  if(keys.Space && frame % 12 === 0) shoot();
+
+  bullets.forEach(b => b.y -= 7);
+  bullets = bullets.filter(b => b.y > 0);
+
+  enemies.forEach(e => {
+    e.x += Math.sin(frame / 35) * 1.2;
+    e.y += 0.12;
+
+    if(e.y > 350) {
+      lives--;
+      e.y = 35;
+      e.x = Math.random() * 400;
+      document.getElementById('lives').textContent = lives;
+    }
+  });
+
+  bullets.forEach(b => {
+    enemies.forEach((e, i) => {
+      if(
+        b.x < e.x + e.w &&
+        b.x + b.w > e.x &&
+        b.y < e.y + e.h &&
+        b.y + b.h > e.y
+      ) {
+        enemies.splice(i, 1);
+        b.y = -20;
+        score += 10;
+        document.getElementById('spaceScore').textContent = score;
+      }
+    });
+  });
+
+  bullets = bullets.filter(b => b.y > 0);
+
+  if(enemies.length === 0) {
+    makeEnemies();
+  }
+
+  if(lives <= 0) {
+    running = false;
+    document.getElementById('spaceStatus').textContent =
+      'GAME OVER! Final Score: ' + score;
+    document.getElementById('startSpace').textContent = 'PLAY AGAIN';
+  }
+}
+
+function drawSpace() {
+  ctx.clearRect(0, 0, 500, 420);
+
+  drawPlayer();
+  drawEnemies();
+
+  ctx.fillStyle = '#00ffff';
+  bullets.forEach(b => {
+    ctx.fillRect(b.x, b.y, b.w, b.h);
+  });
+}
+
+function loopSpace() {
+  if(!running) return;
+
+  frame++;
+  updateSpace();
+  drawSpace();
+
+  if(running) animationId = requestAnimationFrame(loopSpace);
+}
+
+function startSpace() {
+  if(running) return;
+
+  cancelAnimationFrame(animationId);
+
+  score = 0;
+  lives = 3;
+  frame = 0;
+  bullets = [];
+  player.x = 235;
+
+  document.getElementById('spaceScore').textContent = score;
+  document.getElementById('lives').textContent = lives;
+  document.getElementById('spaceStatus').textContent = 'DEFEND THE GALAXY!';
+  document.getElementById('startSpace').textContent = 'RESTART GAME';
+
+  makeEnemies();
+  running = true;
+  loopSpace();
+}
+
+function stopSpace() {
+  running = false;
+  keys = {};
+  cancelAnimationFrame(animationId);
+  ctx.clearRect(0, 0, 500, 420);
+}
+
+// KEYBOARD
+
+document.addEventListener('keydown', e => {
+  if(['ArrowLeft','ArrowRight','Space'].includes(e.code)) {
+    e.preventDefault();
+  }
+
+  keys[e.code] = true;
+});
+
+document.addEventListener('keyup', e => {
+  keys[e.code] = false;
+});
+
+// MOBILE CONTROLS
+
+function holdButton(id, code) {
+  const btn = document.getElementById(id);
+
+  btn.addEventListener('pointerdown', e => {
+    e.preventDefault();
+    keys[code] = true;
+  });
+
+  ['pointerup','pointerleave','pointercancel'].forEach(event => {
+    btn.addEventListener(event, () => {
+      keys[code] = false;
+    });
+  });
+}
+
+holdButton('leftBtn', 'ArrowLeft');
+holdButton('rightBtn', 'ArrowRight');
+holdButton('fireBtn', 'Space');
+
+drawSpace();
+
+</script>
+</body>
+</html>
