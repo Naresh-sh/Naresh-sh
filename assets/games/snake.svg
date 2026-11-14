@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="crtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041009"/>
+      <stop offset="100%" stop-color="#010503"/>
+    </linearGradient>
+    <filter id="glowGreen">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="gridDots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#00ff88" opacity="0.15"/>
+    </pattern>
+    <style>
+      @keyframes food1_anim {
+        0%, 30% { opacity: 1; transform: scale(1); }
+        32%, 100% { opacity: 0; transform: scale(1.5); }
+      }
+      @keyframes food2_anim {
+        0%, 32% { opacity: 0; transform: scale(0.5); }
+        35%, 70% { opacity: 1; transform: scale(1); }
+        72%, 100% { opacity: 0; transform: scale(1.5); }
+      }
+      @keyframes food3_anim {
+        0%, 72% { opacity: 0; transform: scale(0.5); }
+        75%, 98% { opacity: 1; transform: scale(1); }
+        100% { opacity: 0; }
+      }
+      @keyframes score_anim {
+        0%, 30% { content: 'SCORE: 0140'; }
+        33%, 70% { content: 'SCORE: 0280'; }
+        73%, 100% { content: 'SCORE: 0420'; }
+      }
+      /* Snake slither keyframes */
+      @keyframes slither {
+        0% { stroke-dashoffset: 800; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes head_move {
+        0%   { transform: translate(60px, 60px); }
+        20%  { transform: translate(320px, 60px); }
+        32%  { transform: translate(320px, 140px); }
+        50%  { transform: translate(140px, 140px); }
+        65%  { transform: translate(140px, 240px); }
+        75%  { transform: translate(360px, 240px); }
+        90%  { transform: translate(360px, 300px); }
+        100% { transform: translate(60px, 300px); }
+      }
+      .snake-body {
+        stroke-dasharray: 120 700;
+        animation: slither 8s linear infinite;
+      }
+      .food1 { animation: food1_anim 8s infinite; transform-origin: 320px 140px; }
+      .food2 { animation: food2_anim 8s infinite; transform-origin: 140px 240px; }
+      .food3 { animation: food3_anim 8s infinite; transform-origin: 360px 300px; }
+      .score-text { font-family: 'Fira Code', monospace; font-size: 11px; fill: #00ff88; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Outer Console Frame -->
+  <rect x="2" y="2" width="496" height="416" rx="8" fill="url(#crtGrad)" stroke="#064e3b" stroke-width="2"/>
+
+  <!-- Header Bar -->
+  <rect x="2" y="2" width="496" height="32" rx="8" fill="#022c22"/>
+  <circle cx="16" cy="16" r="4.5" fill="#ef4444"/>
+  <circle cx="30" cy="16" r="4.5" fill="#f59e0b"/>
+  <circle cx="44" cy="16" r="4.5" fill="#10b981"/>
+  <text x="250" y="20" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11" fill="#34d399" font-weight="bold">RETRO ARCADE: SNAKE 8-BIT // KALI EDITION</text>
+
+  <!-- Scoreboard -->
+  <rect x="20" y="42" width="460" height="32" rx="4" fill="#021a14" stroke="#065f46"/>
+  <text x="35" y="62" class="score-text">SCORE: <tspan fill="#f8fafc">0420</tspan></text>
+  <text x="205" y="62" class="score-text">TARGET: <tspan fill="#f87171">🍎 21/50</tspan></text>
+  <text x="365" y="62" class="score-text">SPEED: <tspan fill="#facc15">10X FAST</tspan></text>
+
+  <!-- Game Arena with Dot Matrix Grid -->
+  <g transform="translate(20, 84)">
+    <rect x="0" y="0" width="460" height="280" rx="6" fill="#020b07" stroke="#047857" stroke-width="1.5"/>
+    <rect x="0" y="0" width="460" height="280" rx="6" fill="url(#gridDots)"/>
+
+    <!-- Path for Snake -->
+    <path d="M 40 40 L 320 40 L 320 120 L 120 120 L 120 200 L 380 200 L 380 250 L 40 250 Z"
+          fill="none" stroke="#00ff88" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"
+          filter="url(#glowGreen)" class="snake-body"/>
+
+    <!-- Food Pellets (Apples) -->
+    <!-- Food 1 at (320, 120) -->
+    <g class="food1">
+      <circle cx="320" cy="120" r="8" fill="#ef4444" filter="url(#glowGreen)"/>
+      <rect x="319" y="109" width="2" height="4" fill="#10b981" rx="1"/>
+    </g>
+
+    <!-- Food 2 at (120, 200) -->
+    <g class="food2">
+      <circle cx="120" cy="200" r="8" fill="#ef4444" filter="url(#glowGreen)"/>
+      <rect x="119" y="189" width="2" height="4" fill="#10b981" rx="1"/>
+    </g>
+
+    <!-- Food 3 at (380, 250) -->
+    <g class="food3">
+      <circle cx="380" cy="250" r="8" fill="#ef4444" filter="url(#glowGreen)"/>
+      <rect x="379" y="239" width="2" height="4" fill="#10b981" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Bottom Console Status & Controls -->
+  <rect x="20" y="374" width="460" height="34" rx="4" fill="#021a14" stroke="#065f46"/>
+  <text x="35" y="395" font-family="'Fira Code', monospace" font-size="11" fill="#34d399">
+    CONTROLS: [▲ UP] [▼ DOWN] [◀ LEFT] [▶ RIGHT]
+  </text>
+  <text x="465" y="395" text-anchor="end" font-family="'Fira Code', monospace" font-size="11" fill="#00ff88" font-weight="bold">
+    ● GAME LOOP ACTIVE
+  </text>
+</svg>

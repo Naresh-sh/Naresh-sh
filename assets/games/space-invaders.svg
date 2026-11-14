@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="spaceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080412"/>
+      <stop offset="100%" stop-color="#020108"/>
+    </linearGradient>
+    <filter id="laserGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      /* Aliens march horizontally */
+      @keyframes alienMarch {
+        0%   { transform: translateX(0); }
+        45%  { transform: translateX(50px); }
+        50%  { transform: translate(50px, 8px); }
+        95%  { transform: translate(0, 8px); }
+        100% { transform: translate(0, 0); }
+      }
+      /* Pose toggle */
+      @keyframes pose1 { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+      @keyframes pose2 { 0%, 50% { opacity: 0; } 51%, 100% { opacity: 1; } }
+      
+      /* Cannon movement */
+      @keyframes cannonMove {
+        0%, 100% { transform: translateX(0); }
+        30% { transform: translateX(120px); }
+        70% { transform: translateX(-100px); }
+      }
+      /* Laser shoot */
+      @keyframes laserFire {
+        0%   { transform: translateY(0); opacity: 0; }
+        10%  { transform: translateY(0); opacity: 1; }
+        60%  { transform: translateY(-160px); opacity: 1; }
+        65%  { transform: translateY(-160px); opacity: 0; }
+        100% { opacity: 0; }
+      }
+      /* Exploding alien */
+      @keyframes alienExplode {
+        0%, 58% { opacity: 1; transform: scale(1); }
+        60% { opacity: 1; transform: scale(1.6); filter: url(#laserGlow); }
+        65%, 90% { opacity: 0; }
+        95%, 100% { opacity: 1; transform: scale(1); }
+      }
+      .fleet { animation: alienMarch 4s ease-in-out infinite; }
+      .p1 { animation: pose1 0.8s steps(1) infinite; }
+      .p2 { animation: pose2 0.8s steps(1) infinite; }
+      .cannon-group { animation: cannonMove 6s ease-in-out infinite; }
+      .laser-beam { animation: laserFire 1.5s linear infinite; }
+      .exploding-target { animation: alienExplode 3s infinite; transform-origin: 230px 90px; }
+      .hud-text { font-family: 'Fira Code', monospace; font-size: 11px; fill: #a855f7; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="2" y="2" width="496" height="416" rx="8" fill="url(#spaceBg)" stroke="#581c87" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="2" y="2" width="496" height="32" rx="8" fill="#1e0a38"/>
+  <circle cx="16" cy="16" r="4.5" fill="#ef4444"/>
+  <circle cx="30" cy="16" r="4.5" fill="#f59e0b"/>
+  <circle cx="44" cy="16" r="4.5" fill="#10b981"/>
+  <text x="250" y="20" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11" fill="#c084fc" font-weight="bold">ARCADE: SPACE INVADERS // 1978 RETRO MATRIX</text>
+
+  <!-- Score HUD -->
+  <rect x="20" y="42" width="460" height="32" rx="4" fill="#0f051d" stroke="#3b0764"/>
+  <text x="35" y="62" class="hud-text">SCORE: <tspan fill="#f8fafc">02640</tspan></text>
+  <text x="200" y="62" class="hud-text">HI-SCORE: <tspan fill="#facc15">09990</tspan></text>
+  <text x="370" y="62" class="hud-text">SHIPS: <tspan fill="#22c55e">▲ ▲ ▲</tspan></text>
+
+  <!-- Arena -->
+  <g transform="translate(20, 84)">
+    <rect x="0" y="0" width="460" height="280" rx="6" fill="#05020c" stroke="#3b0764" stroke-width="1.5"/>
+
+    <!-- Starfield dots -->
+    <g fill="#e9d5ff" opacity="0.4">
+      <circle cx="40" cy="30" r="1"/>
+      <circle cx="120" cy="70" r="1.5"/>
+      <circle cx="280" cy="25" r="1"/>
+      <circle cx="390" cy="90" r="1.2"/>
+      <circle cx="180" cy="180" r="1"/>
+      <circle cx="320" cy="150" r="1.5"/>
+      <circle cx="70" cy="220" r="1"/>
+      <circle cx="420" cy="230" r="1.2"/>
+    </g>
+
+    <!-- Alien Fleet -->
+    <g class="fleet">
+      <!-- Row 1: Squid Aliens (Red) -->
+      <g fill="#f43f5e">
+        <!-- Alien 1 -->
+        <g transform="translate(80, 20)">
+          <rect x="6" y="0" width="8" height="3"/>
+          <rect x="3" y="3" width="14" height="4"/>
+          <rect x="0" y="7" width="20" height="5"/>
+          <rect x="5" y="12" width="3" height="4" class="p1"/>
+          <rect x="12" y="12" width="3" height="4" class="p1"/>
+          <rect x="2" y="12" width="3" height="4" class="p2"/>
+          <rect x="15" y="12" width="3" height="4" class="p2"/>
+        </g>
+        <!-- Alien 2 -->
+        <g transform="translate(150, 20)">
+          <rect x="6" y="0" width="8" height="3"/>
+          <rect x="3" y="3" width="14" height="4"/>
+          <rect x="0" y="7" width="20" height="5"/>
+          <rect x="5" y="12" width="3" height="4" class="p1"/>
+          <rect x="12" y="12" width="3" height="4" class="p1"/>
+          <rect x="2" y="12" width="3" height="4" class="p2"/>
+          <rect x="15" y="12" width="3" height="4" class="p2"/>
+        </g>
+        <!-- Alien 3 -->
+        <g transform="translate(220, 20)">
+          <rect x="6" y="0" width="8" height="3"/>
+          <rect x="3" y="3" width="14" height="4"/>
+          <rect x="0" y="7" width="20" height="5"/>
+          <rect x="5" y="12" width="3" height="4" class="p1"/>
+          <rect x="12" y="12" width="3" height="4" class="p1"/>
+          <rect x="2" y="12" width="3" height="4" class="p2"/>
+          <rect x="15" y="12" width="3" height="4" class="p2"/>
+        </g>
+        <!-- Alien 4 -->
+        <g transform="translate(290, 20)">
+          <rect x="6" y="0" width="8" height="3"/>
+          <rect x="3" y="3" width="14" height="4"/>
+          <rect x="0" y="7" width="20" height="5"/>
+          <rect x="5" y="12" width="3" height="4" class="p1"/>
+          <rect x="12" y="12" width="3" height="4" class="p1"/>
+          <rect x="2" y="12" width="3" height="4" class="p2"/>
+          <rect x="15" y="12" width="3" height="4" class="p2"/>
+        </g>
+      </g>
+
+      <!-- Row 2: Crab Aliens (Yellow/Green) -->
+      <g fill="#38bdf8">
+        <g transform="translate(80, 50)">
+          <rect x="4" y="0" width="16" height="4"/>
+          <rect x="0" y="4" width="24" height="6"/>
+          <rect x="4" y="10" width="16" height="4"/>
+          <rect x="2" y="14" width="4" height="4" class="p1"/>
+          <rect x="18" y="14" width="4" height="4" class="p1"/>
+          <rect x="6" y="14" width="4" height="4" class="p2"/>
+          <rect x="14" y="14" width="4" height="4" class="p2"/>
+        </g>
+        <g transform="translate(150, 50)">
+          <rect x="4" y="0" width="16" height="4"/>
+          <rect x="0" y="4" width="24" height="6"/>
+          <rect x="4" y="10" width="16" height="4"/>
+          <rect x="2" y="14" width="4" height="4" class="p1"/>
+          <rect x="18" y="14" width="4" height="4" class="p1"/>
+          <rect x="6" y="14" width="4" height="4" class="p2"/>
+          <rect x="14" y="14" width="4" height="4" class="p2"/>
+        </g>
+        <!-- Alien at 220 is exploding target -->
+        <g transform="translate(220, 50)" class="exploding-target">
+          <rect x="4" y="0" width="16" height="4"/>
+          <rect x="0" y="4" width="24" height="6"/>
+          <rect x="4" y="10" width="16" height="4"/>
+          <rect x="2" y="14" width="4" height="4" class="p1"/>
+          <rect x="18" y="14" width="4" height="4" class="p1"/>
+          <rect x="6" y="14" width="4" height="4" class="p2"/>
+          <rect x="14" y="14" width="4" height="4" class="p2"/>
+        </g>
+        <g transform="translate(290, 50)">
+          <rect x="4" y="0" width="16" height="4"/>
+          <rect x="0" y="4" width="24" height="6"/>
+          <rect x="4" y="10" width="16" height="4"/>
+          <rect x="2" y="14" width="4" height="4" class="p1"/>
+          <rect x="18" y="14" width="4" height="4" class="p1"/>
+          <rect x="6" y="14" width="4" height="4" class="p2"/>
+          <rect x="14" y="14" width="4" height="4" class="p2"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Defensive Bunkers -->
+    <g fill="#22c55e">
+      <path d="M60 200 H95 V215 H85 V225 H70 V215 H60 Z"/>
+      <path d="M205 200 H240 V215 H230 V225 H215 V215 H205 Z"/>
+      <path d="M350 200 H385 V215 H375 V225 H360 V215 H350 Z"/>
+    </g>
+
+    <!-- Player Defender Tank Cannon -->
+    <g transform="translate(215, 245)" class="cannon-group">
+      <!-- Laser Fired Upwards -->
+      <line x1="15" y1="-4" x2="15" y2="-18" stroke="#22c55e" stroke-width="3" stroke-linecap="round" filter="url(#laserGlow)" class="laser-beam"/>
+      <!-- Cannon body -->
+      <rect x="13" y="0" width="4" height="6" fill="#22c55e"/>
+      <rect x="8" y="6" width="14" height="6" fill="#22c55e" rx="1"/>
+      <rect x="2" y="12" width="26" height="10" fill="#22c55e" rx="2"/>
+      <!-- Tracks -->
+      <rect x="0" y="20" width="30" height="4" fill="#15803d"/>
+    </g>
+  </g>
+
+  <!-- Bottom HUD -->
+  <rect x="20" y="374" width="460" height="34" rx="4" fill="#0f051d" stroke="#3b0764"/>
+  <text x="35" y="395" font-family="'Fira Code', monospace" font-size="11" fill="#c084fc">
+    CONTROLS: [◀] MOVE LEFT  [▶] MOVE RIGHT  [SPACE] FIRE
+  </text>
+  <text x="465" y="395" text-anchor="end" font-family="'Fira Code', monospace" font-size="11" fill="#22c55e" font-weight="bold">
+    👾 INVASION LEVEL 1
+  </text>
+</svg>

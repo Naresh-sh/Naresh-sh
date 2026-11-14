@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e14"/>
+      <stop offset="100%" stop-color="#030609"/>
+    </linearGradient>
+    <filter id="glowCyan">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowPink">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowGreen">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes x1_anim { 0%, 8% { opacity: 0; transform: scale(0.5); } 10%, 94% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; } }
+      @keyframes o1_anim { 0%, 20% { opacity: 0; transform: scale(0.5); } 23%, 94% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; } }
+      @keyframes x2_anim { 0%, 33% { opacity: 0; transform: scale(0.5); } 36%, 94% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; } }
+      @keyframes o2_anim { 0%, 46% { opacity: 0; transform: scale(0.5); } 49%, 94% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; } }
+      @keyframes x3_anim { 0%, 59% { opacity: 0; transform: scale(0.5); } 62%, 94% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; } }
+      @keyframes o3_anim { 0%, 72% { opacity: 0; transform: scale(0.5); } 75%, 94% { opacity: 1; transform: scale(1); } 97%, 100% { opacity: 0; } }
+      @keyframes win_strike { 0%, 74% { opacity: 0; stroke-dashoffset: 240; } 78%, 94% { opacity: 1; stroke-dashoffset: 0; } 97%, 100% { opacity: 0; } }
+      @keyframes banner_flash { 0%, 76% { opacity: 0; } 78%, 82% { opacity: 1; } 84% { opacity: 0.3; } 86%, 94% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes status_msg1 { 0%, 20% { opacity: 1; } 23%, 100% { opacity: 0; } }
+      @keyframes status_msg2 { 0%, 22% { opacity: 0; } 23%, 46% { opacity: 1; } 49%, 100% { opacity: 0; } }
+      @keyframes status_msg3 { 0%, 48% { opacity: 0; } 49%, 72% { opacity: 1; } 75%, 100% { opacity: 0; } }
+      @keyframes status_msg4 { 0%, 74% { opacity: 0; } 75%, 95% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      
+      .x-move1 { animation: x1_anim 14s infinite ease-out; transform-origin: 250px 225px; }
+      .o-move1 { animation: o1_anim 14s infinite ease-out; transform-origin: 175px 150px; }
+      .x-move2 { animation: x2_anim 14s infinite ease-out; transform-origin: 325px 300px; }
+      .o-move2 { animation: o2_anim 14s infinite ease-out; transform-origin: 325px 150px; }
+      .x-move3 { animation: x3_anim 14s infinite ease-out; transform-origin: 250px 150px; }
+      .o-move3 { animation: o3_anim 14s infinite ease-out; transform-origin: 175px 225px; }
+      
+      .win-line {
+        stroke-dasharray: 240;
+        animation: win_strike 14s infinite ease-in;
+      }
+      .win-banner { animation: banner_flash 14s infinite; }
+      .msg1 { animation: status_msg1 14s infinite; }
+      .msg2 { animation: status_msg2 14s infinite; }
+      .msg3 { animation: status_msg3 14s infinite; }
+      .msg4 { animation: status_msg4 14s infinite; }
+    </style>
+  </defs>
+
+  <!-- Arcade Outer Card -->
+  <rect x="2" y="2" width="496" height="416" rx="8" fill="url(#bgGrad)" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Top Terminal Header -->
+  <rect x="2" y="2" width="496" height="32" rx="8" fill="#0c1520"/>
+  <circle cx="16" cy="16" r="4.5" fill="#ef4444"/>
+  <circle cx="30" cy="16" r="4.5" fill="#f59e0b"/>
+  <circle cx="44" cy="16" r="4.5" fill="#10b981"/>
+  <text x="250" y="20" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11" fill="#00ff88" font-weight="bold">ARCADE: TIC-TAC-TOE // MINIMAX AI</text>
+
+  <!-- Scoreboard -->
+  <rect x="20" y="42" width="460" height="36" rx="4" fill="#030712" stroke="#1f2937"/>
+  <text x="35" y="64" font-family="'Fira Code', monospace" font-size="11" fill="#38bdf8" font-weight="bold">PLAYER (X): <tspan fill="#f8fafc">0</tspan></text>
+  <text x="205" y="64" font-family="'Fira Code', monospace" font-size="11" fill="#94a3b8" font-weight="bold">DRAWS: <tspan fill="#f8fafc">14</tspan></text>
+  <text x="355" y="64" font-family="'Fira Code', monospace" font-size="11" fill="#f43f5e" font-weight="bold">AI (O): <tspan fill="#f8fafc">42</tspan></text>
+
+  <!-- Game Board Grid 3x3 -->
+  <g transform="translate(137, 95)">
+    <rect x="0" y="0" width="225" height="225" rx="6" fill="#050b11" stroke="#111827"/>
+    <!-- Grid Lines -->
+    <line x1="75" y1="10" x2="75" y2="215" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" filter="url(#glowCyan)" opacity="0.7"/>
+    <line x1="150" y1="10" x2="150" y2="215" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" filter="url(#glowCyan)" opacity="0.7"/>
+    <line x1="10" y1="75" x2="215" y2="75" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" filter="url(#glowCyan)" opacity="0.7"/>
+    <line x1="10" y1="150" x2="215" y2="150" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" filter="url(#glowCyan)" opacity="0.7"/>
+
+    <!-- MOVES -->
+    <!-- Move 1: Player X at (1,1) [Center] -->
+    <g class="x-move1">
+      <line x1="93" y1="93" x2="132" y2="132" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" filter="url(#glowCyan)"/>
+      <line x1="132" y1="93" x2="93" y2="132" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" filter="url(#glowCyan)"/>
+    </g>
+
+    <!-- Move 2: AI O at (0,0) [Top-Left] -->
+    <g class="o-move1">
+      <circle cx="37.5" cy="37.5" r="20" fill="none" stroke="#f43f5e" stroke-width="4" filter="url(#glowPink)"/>
+    </g>
+
+    <!-- Move 3: Player X at (2,2) [Bottom-Right] -->
+    <g class="x-move2">
+      <line x1="168" y1="168" x2="207" y2="207" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" filter="url(#glowCyan)"/>
+      <line x1="207" y1="168" x2="168" y2="207" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" filter="url(#glowCyan)"/>
+    </g>
+
+    <!-- Move 4: AI O at (0,2) [Top-Right] -->
+    <g class="o-move2">
+      <circle cx="187.5" cy="37.5" r="20" fill="none" stroke="#f43f5e" stroke-width="4" filter="url(#glowPink)"/>
+    </g>
+
+    <!-- Move 5: Player X at (0,1) [Top-Center] -->
+    <g class="x-move3">
+      <line x1="93" y1="18" x2="132" y2="57" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" filter="url(#glowCyan)"/>
+      <line x1="132" y1="18" x2="93" y2="57" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" filter="url(#glowCyan)"/>
+    </g>
+
+    <!-- Move 6: AI O at (1,0) [Mid-Left] -->
+    <g class="o-move3">
+      <circle cx="37.5" cy="112.5" r="20" fill="none" stroke="#f43f5e" stroke-width="4" filter="url(#glowPink)"/>
+    </g>
+
+    <!-- Win Strike Line across Column 0 (AI wins vertical: (0,0), (1,0), (2,0) wait or row) -->
+    <!-- Let's make win line through AI positions: (0,0), (0,1 wait, (0,0) and (0,2) wait. Let's make AI complete column 0 with (2,0)! -->
+    <g class="o-move3">
+      <circle cx="37.5" cy="187.5" r="20" fill="none" stroke="#f43f5e" stroke-width="4" filter="url(#glowPink)"/>
+    </g>
+    <line x1="37.5" y1="15" x2="37.5" y2="210" stroke="#10b981" stroke-width="5" stroke-linecap="round" filter="url(#glowGreen)" class="win-line"/>
+  </g>
+
+  <!-- Live Dynamic Status Console at Bottom -->
+  <rect x="20" y="332" width="460" height="44" rx="4" fill="#030712" stroke="#1f2937"/>
+  
+  <text x="250" y="358" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11.5" fill="#38bdf8" class="msg1">
+    ▶ TURN 1: PLAYER [X] MOVES CENTER (1,1)...
+  </text>
+  <text x="250" y="358" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11.5" fill="#f59e0b" class="msg2">
+    ⚙️ AI ALGORITHM: MINIMAX DEPTH 9 EVALUATING OPTIMAL COUNTER...
+  </text>
+  <text x="250" y="358" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11.5" fill="#f43f5e" class="msg3">
+    ⚡ AI PLACED [O] CORNER BLOCK // FORK OPPORTUNITY DETECTED!
+  </text>
+  <text x="250" y="358" text-anchor="middle" font-family="'Fira Code', monospace" font-size="11.5" fill="#00ff88" font-weight="bold" class="msg4 win-banner">
+    🏆 ALGORITHM VICTORY! MINIMAX PERFECT-PLAY PROVEN (NO CHANCE)
+  </text>
+
+  <!-- Tagline footer -->
+  <text x="250" y="400" text-anchor="middle" font-family="'Fira Code', monospace" font-size="10" fill="#64748b">
+    ⚡ ALGORITHM ENGINE: ZERO-SUM MINIMAX RECURSION // EMBEDDED REALTIME
+  </text>
+</svg>

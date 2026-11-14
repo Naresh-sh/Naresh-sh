@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 430" width="100%" height="auto">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#00b4d8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(430px); }
+      }
+      .cursor {
+        animation: blink 1s step-start infinite;
+      }
+      .prompt { font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace; font-size: 13.5px; fill: #00ff88; }
+      .path { fill: #38bdf8; }
+      .cmd { fill: #f8fafc; font-weight: bold; }
+      .ascii { font-family: 'Courier New', Courier, monospace; font-size: 11px; fill: #00ff88; font-weight: bold; filter: url(#glow); }
+      .box { font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace; font-size: 12.5px; fill: #94a3b8; }
+      .key { fill: #38bdf8; font-weight: 600; }
+      .val { fill: #f1f5f9; }
+      .highlight { fill: #00ff88; font-weight: bold; }
+      .badge-online { fill: #10b981; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Window Container -->
+  <rect x="2" y="2" width="846" height="426" rx="10" fill="#070b0e" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Window Header Bar -->
+  <path d="M2 12 Q2 2 12 2 L838 2 Q848 2 848 12 L848 36 L2 36 Z" fill="#0d151c" />
+  <line x1="2" y1="36" x2="848" y2="36" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Window Control Buttons (macOS / Kali style) -->
+  <circle cx="22" cy="19" r="6" fill="#ef4444" />
+  <circle cx="42" cy="19" r="6" fill="#f59e0b" />
+  <circle cx="62" cy="19" r="6" fill="#10b981" />
+
+  <!-- Window Title -->
+  <text x="425" y="23" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#64748b" font-weight="bold">naresh@kali: ~/welcome-metrics (bash)</text>
+
+  <!-- Status indicator on right -->
+  <circle cx="818" cy="19" r="4" fill="#00ff88" filter="url(#glow)"/>
+  <text x="806" y="23" text-anchor="end" font-family="'Fira Code', monospace" font-size="11" fill="#00ff88">LIVE</text>
+
+  <!-- Content -->
+  <!-- Prompt line -->
+  <g transform="translate(25, 62)">
+    <text class="prompt">
+      <tspan fill="#00ff88">┌──(</tspan><tspan fill="#ef4444" font-weight="bold">naresh💀kali</tspan><tspan fill="#00ff88">)-[</tspan><tspan class="path">~/portfolio/metrics</tspan><tspan fill="#00ff88">]</tspan>
+    </text>
+    <text y="20" class="prompt">
+      <tspan fill="#00ff88">└─$ </tspan><tspan class="cmd">./display_welcome --pro --arcade-init</tspan>
+    </text>
+  </g>
+
+  <!-- ASCII Art: WELCOME -->
+  <g transform="translate(25, 115)">
+    <text class="ascii" xml:space="preserve">
+<tspan x="0" dy="0">██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗</tspan>
+<tspan x="0" dy="13">██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝</tspan>
+<tspan x="0" dy="13">██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  </tspan>
+<tspan x="0" dy="13">██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  </tspan>
+<tspan x="0" dy="13">╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗</tspan>
+<tspan x="0" dy="13"> ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝</tspan>
+    </text>
+  </g>
+
+  <!-- System Telemetry Metrics Table -->
+  <g transform="translate(25, 218)">
+    <!-- Box frame -->
+    <rect x="0" y="0" width="800" height="182" rx="6" fill="#04080c" stroke="#1e293b" stroke-width="1" />
+    <path d="M0 0 L180 0 L190 20 L0 20 Z" fill="#0f172a" />
+    <text x="12" y="14" font-family="'Fira Code', monospace" font-size="11" fill="#38bdf8" font-weight="bold">CORE TELEMETRY</text>
+
+    <!-- Metrics rows -->
+    <text x="20" y="42" class="box">
+      <tspan class="key">👤 DEVELOPER   :</tspan> <tspan class="val">Naresh Mali</tspan> <tspan fill="#64748b">(GitHub: </tspan><tspan class="highlight">@Naresh-sh</tspan><tspan fill="#64748b">)</tspan>
+    </text>
+
+    <text x="20" y="66" class="box">
+      <tspan class="key">💻 ENVIRONMENT :</tspan> <tspan class="val">Kali Linux x86_64 // Custom Prototyping &amp; Hardware Lab</tspan>
+    </text>
+
+    <text x="20" y="90" class="box">
+      <tspan class="key">⚡ EXPERTISE   :</tspan> <tspan class="val">ESP32 Firmware • Embedded C/C++ • Native Android • 3D Design</tspan>
+    </text>
+
+    <text x="20" y="114" class="box">
+      <tspan class="key">🔧 HARDWARE    :</tspan> <tspan class="val">ESP32-CAM, NEO-6M GPS, SSD1306 OLED, I2S Audio, Custom Enclosures</tspan>
+    </text>
+
+    <text x="20" y="138" class="box">
+      <tspan class="key">🕹️ MINI ARCADE :</tspan> <tspan class="highlight">[ONLINE]</tspan> <tspan class="val">Tic-Tac-Toe AI • Retro Snake • Chrome Dino • Space Invaders</tspan>
+    </text>
+
+    <text x="20" y="162" class="box">
+      <tspan class="key">📡 SYSTEM STATE:</tspan> <tspan class="badge-online">● 100% OPERATIONAL</tspan> <tspan fill="#475569">| Ready for Next-Gen Engineering</tspan> <tspan class="cursor" fill="#00ff88">█</tspan>
+    </text>
+  </g>
+</svg>
